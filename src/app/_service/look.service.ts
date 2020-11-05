@@ -10,7 +10,7 @@ export class LookService {
   constructor() { }
 
   /**
-   * Appends the look to the pre-configured Habbo imager URL
+   * Appends the look to the pre-configured BoomBang imager URL
    *
    * @param look
    * @return string

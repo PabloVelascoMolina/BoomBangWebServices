@@ -1,20 +1,20 @@
 .form-control {
-  background-color: #292B2F;
+  background-color:#292b2f12;
   border-radius: 2px;
-  border: 1px solid #292B2F;
+  border: 1px solid#292b2f21;
   transition: .25s all;
-  color: #fff;
+  color: #333;
 
   &:focus {
     border-color: transparent;
     box-shadow: unset;
-    background-color: #303235;
-    color: #fff;
+    background-color: #292b2f26;
+    color: #333;
   }
 
   &.ng-touched {
     &.ng-invalid {
-      border: 1px solid #b41030;
+      border: 1px solid #ff0000;
     }
   }
 }
@@ -26,7 +26,7 @@ textarea {
     padding: 1rem 2rem 1rem 2rem;
     resize: none;
     font-weight: 600;
-    color: #fff;
+    color: #333;
 
     &:focus {
       background-color: var(--main-bg-color);
@@ -56,5 +56,5 @@ textarea {
 }
 
 .ng-dirty.ng-invalid:not(form) {
-  border: 1px solid #b41030;
+  border: 1px solid #ff0000;
 }

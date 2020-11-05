@@ -59,7 +59,7 @@ export class GuildMembersComponent {
 
   look(look: string): string {
     if (look === null) {
-      return 'assets/images/habbo.gif';
+      return 'assets/images/BoomBang.gif';
     }
 
     return `${environment.app.imager}${look}&action=std&gesture=sml&direction=2&head_direction=2&size=l`;

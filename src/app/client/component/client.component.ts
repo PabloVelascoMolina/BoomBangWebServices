@@ -71,7 +71,7 @@ export class ClientComponent implements OnInit, OnDestroy {
     });
 
     this.isFlashActivated = flashDetected.installed;
-    this.isSessionActive = this.userService.user.online === 1;
+    //this.isSessionActive = this.userService.user.online === 1;
 
     if (!this.isSessionActive) {
       this.loadClient();
@@ -82,7 +82,7 @@ export class ClientComponent implements OnInit, OnDestroy {
    * Loads the client if the SSO ticket request were successfully
    */
   loadClient(): void {
-    const ticketSubscription: Subscription = this.clientService.ticket().subscribe({
+    /*const ticketSubscription: Subscription = this.clientService.ticket().subscribe({
       next: (ticket: string) => {
         client.vars['sso.ticket'] = ticket;
 
@@ -104,7 +104,7 @@ export class ClientComponent implements OnInit, OnDestroy {
       },
       error: () => this.isDisconnected = true,
       complete: () => ticketSubscription.unsubscribe()
-    });
+    });*/
   }
 
   /**

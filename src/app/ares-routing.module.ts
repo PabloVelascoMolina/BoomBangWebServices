@@ -6,10 +6,14 @@ import {ActiveSessionGuard} from './_guard/active-session.guard';
 import {AuthGuard} from './_guard/auth.guard';
 
 const routes: Routes = [
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   {
-    path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    pathMatch: 'full'
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
   },
   {
     path: 'register',
@@ -29,9 +33,7 @@ const routes: Routes = [
   },
   {
     path: 'community',
-    loadChildren: () => import('./community/community.module').then(m => m.CommunityModule),
-    canActivate: [AuthGuard],
-    canActivateChild: [ActiveSessionGuard]
+    loadChildren: () => import('./community/community.module').then(m => m.CommunityModule)
   },
   {
     path: 'employees',

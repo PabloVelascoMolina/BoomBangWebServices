@@ -17,7 +17,7 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   user: User;
 
-  name = environment.app.hotelName;
+  name = environment.app.appName;
   date = environment.app.components.dashboard.hero.date;
   time = environment.app.components.dashboard.hero.time;
 
@@ -42,7 +42,7 @@ export class HeroComponent implements OnInit, OnDestroy {
         this.counter = value;
 
         if (value > 1) {
-          this.name = `${environment.app.hotelName}'s`;
+          this.name = `${environment.app.appName}'s`;
         }
       }
     });

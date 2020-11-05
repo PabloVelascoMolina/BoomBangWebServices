@@ -1,21 +1,13 @@
 <ares-layout-loader [@loader]="!state"></ares-layout-loader>
+<div class="container">
 
-<ng-container *ngIf="isAuthenticated; else guest">
-  <ares-client></ares-client>
+    <ares-client></ares-client>
 
-  <ares-header></ares-header>
+    <ares-header></ares-header>
 
-  <main>
-    <ng-container *ngIf="router.url !== '/client';">
-      <router-outlet></router-outlet>
-    </ng-container>
-  </main>
 
-  <ares-footer class="d-flex flex-column mt-4"></ares-footer>
-</ng-container>
-
-<ng-template #guest>
-  <main>
     <router-outlet></router-outlet>
-  </main>
-</ng-template>
+    <ares-footer class="d-flex flex-column mt-4"></ares-footer>
+
+</div>
+

@@ -15,11 +15,11 @@ export class ClientService {
    * Gets the SSO ticket
    * @return Observable<string>
    */
-  ticket(): Observable<string> {
+  /*ticket(): Observable<string> {
     return this.apiService.post('user/ticket', {}, {}, false).pipe(
       map(response => response.data.ticket)
     );
-  }
+  }*/
 
   /**
    * Gets the current user counter

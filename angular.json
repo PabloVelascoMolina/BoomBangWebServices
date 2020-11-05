@@ -140,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "ares-frontend"
+  "defaultProject": "ares-frontend",
+  "cli": {
+    "analytics": false
+  }
 }

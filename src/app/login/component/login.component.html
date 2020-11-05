@@ -1,0 +1,23 @@
+<div class="row mt-5 mb-5 bg-dark">
+  <div class="col-md-5 mx-auto">
+    <h1>Iniciar sesión</h1>
+    <form [formGroup]="authForm" (submit)="onSubmit()">
+      <div class="mb-3">
+        <label for="username" class="form-label" [translate]="'HOME.FORM.INPUT.USERNAME.LABEL'"></label>
+        <input type="text" id="username" class="form-control p-4" formControlName="username" required autocomplete="username" aria-describedby="usernameHelp" />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label" [translate]="'HOME.FORM.INPUT.PASSWORD.LABEL'"></label>
+        <input type="password" id="password" class="form-control p-4" formControlName="password" required autocomplete="current-password"/>
+      </div>
+
+      <button class="btn btn-danger w-100 mt-2" [translate]="'HOME.FORM.BUTTON'"></button>
+      <br><br>
+      <div class="d-inline-flex justify-content-center mt-4 mt-xl-0 mt-lg-0 pb-3">
+        <a id="register-anchor" routerLink="/register" [innerHTML]="'HOME.REGISTER' | translate: { appName: appName }"></a>
+      </div>
+    </form>
+
+  </div>
+</div>

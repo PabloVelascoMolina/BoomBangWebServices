@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./buttons.component.scss']
 })
 export class ButtonsComponent implements OnInit {
-  hotelName: string = environment.app.hotelName || 'Ares';
+  appName: string = environment.app.appName || 'Ares';
   url$: string;
 
   @Input('url')

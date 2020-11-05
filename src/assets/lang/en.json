@@ -1,149 +1,149 @@
 {
   "HOME": {
-    "TITLE": "The new era of virtual worlds!",
-    "ALERT": "Login now to join the fun!",
+    "TITLE": "¡La nueva era de los mundos virtuales!",
+    "ALERT": "¡Inicie sesión ahora para unirse a la diversión!",
     "FORM": {
       "INPUT": {
         "USERNAME": {
-          "LABEL": "Username",
-          "HELP": "Type your username in the box above!"
+          "LABEL": "Nombre de usuario",
+          "HELP": "Escriba su nombre de usuario en el cuadro de arriba!"
         },
         "PASSWORD": {
-          "LABEL": "Password"
+          "LABEL": "Contraseña"
         },
-        "EMPTY": "Please fill out all fields!"
+        "EMPTY": "¡Por favor rellene todos los campos!"
       },
-      "BUTTON": "Login!"
+      "BUTTON": "¡Iniciar sesión!"
     },
 
-    "REGISTER": "New Around Here? <span class=\"text--red\">Join {{ hotelName }}</span>"
+    "REGISTER": "¿Nuevo por aquí? <span class=\"text--red\">Unirse a {{ appName }}</span>"
   },
 
   "REGISTER": {
-    "TITLE": "Registration",
-    "DESCRIPTION": "Join the fun by registering today!",
+    "TITLE": "Registro",
+    "DESCRIPTION": "¡Únase a la diversión registrándose hoy!",
 
     "FORM": {
       "INPUT": {
         "USERNAME": {
-          "LABEL": "Username",
+          "LABEL": "Nombre de usuario",
           "ERRORS": {
-            "EMPTY": "Please enter a username!"
+            "EMPTY": "¡Por favor, ingrese un nombre de usuario!"
           }
         },
 
         "PASSWORD": {
-          "LABEL": "Password",
+          "LABEL": "Contraseña",
           "ERRORS": {
-            "EMPTY": "Please enter a password",
-            "NOT_SAME": "The two passwords do not match!"
+            "EMPTY": "Por favor ingrese una contraseña",
+            "NOT_SAME": "¡Las contraseñas no coinciden!"
           }
         },
 
         "MAIL": {
-          "LABEL": "E-Mail",
+          "LABEL": "Correo electrónico",
           "ERRORS": {
-            "EMPTY": "Please enter your email address",
-            "PATTERN": "That is not a valid email!"
+            "EMPTY": "Por favor, introduzca su dirección de correo electrónico",
+            "PATTERN": "¡Ese no es un correo electrónico válido!"
           }
         },
         "LOOKS": {
           "BOYS": {
-            "LABEL": "Male Looks"
+            "LABEL": "Looks masculinos"
           },
           "GIRLS": {
-            "LABEL": "Female Looks"
+            "LABEL": "Looks femeninos"
           }
         }
       },
 
       "BUTTONS": {
-        "REGISTER": "Let's Go!"
+        "REGISTER": "Registrarme"
       }
     },
 
-    "SUCCESS": "Your account has been created!",
-    "ERROR": "Your account could not be created!",
-    "ALREADY": "Already got an account? <span class=\"text--red\">Back to Login!</span>"
+    "SUCCESS": "¡Tu cuenta ha sido creada!",
+    "ERROR": "¡No se pudo crear su cuenta!",
+    "ALREADY": "¿Ya tienes una cuenta? <span class=\"text--red\">Atrás para iniciar sesión!</span>"
   },
 
   "DASHBOARD": {
     "HERO": {
-      "WELCOME": "Welcome back, <strong>{{ username }}</strong>!",
-      "LOGIN": "Your last visit was on {{ date }} at {{ time }}.",
-      "MOTTO": "Motto: <strong>\"{{ motto }}\"</strong>",
-      "COUNTER": "Join <strong>{{ online }}</strong> other player(s)",
-      "ENTER": "Check in",
+      "WELCOME": "Bienvenido, <strong>{{ username }}</strong>!",
+      "LOGIN": "Tu última visita fue en {{ date }} a {{ time }}.",
+      "MOTTO": "<strong>\"{{ motto }}\"</strong>",
+      "COUNTER": "Unirse <strong>{{ online }}</strong> otros usuario(s)",
+      "ENTER": "Inscribirse",
 
-      "CREDITS": "Credits",
-      "POINTS": "Diamonds",
-      "PIXELS": "Meteors"
+      "CREDITS": "Oro",
+      "POINTS": "Plata",
+      "PIXELS": "Diamantes"
     },
-    "YOUR_RANK": "Your Rank:",
+    "YOUR_RANK": "Tu rango es:",
 
     "SLIDER": {
       "ARTICLES": {
-        "TITLE": "No Results Found!",
-        "DESCRIPTION": "Oops! We couldn't find any articles!",
-        "READ_MORE": "Read More..."
+        "TITLE": "¡No se han encontrado resultados!",
+        "DESCRIPTION": "¡Ups! ¡No pudimos encontrar ningún artículo!",
+        "READ_MORE": "Leer mas..."
       }
     },
 
     "FRIENDS": {
-      "TITLE": "Friends",
+      "TITLE": "Amigos",
       "MANNEQUIN": {
-        "NAME": "No Friends(s) Found",
-        "MOTTO": "No Friend(s) were Found"
+        "NAME": "No se encontraron amigos",
+        "MOTTO": "No se encontraron amigos"
       },
 
-      "NOT_FOUND": "{{ username }} could not be found!"
+      "NOT_FOUND": "{{ username }} ¡No pudo ser encontrado!"
     }
   },
 
   "CLIENT": {
     "DISCONNECTED": {
-      "TITLE": "Oh, Bollocks!",
-      "DESCRIPTION": "You've disconnected!",
-      "BUTTON": "Reconnect"
+      "TITLE": "¡Oh, imbéciles!",
+      "DESCRIPTION": "¡Te has desconectado!",
+      "BUTTON": "Reconectar"
     },
 
     "FLASH": {
-      "TITLE": "Oh Bollocks!",
-      "DESCRIPTION": "Click <a href=\"https://get.adobe.com/en/flashplayer\" target=\"_blank\">here</a> and then on \"Activate Flash\" as soon as you are prompted to do so . See you soon!"
+      "TITLE": "¡Oh, malditos!",
+      "DESCRIPTION": "Click <a href=\"https://get.adobe.com/en/flashplayer\" target=\"_blank\">aquí</a> y luego en \"Activate Flash\" tan pronto como se le solicite. ¡Te veo pronto!"
     },
 
     "ACTIVE": {
-      "DESCRIPTION": "You're already checked in!",
-      "BUTTON": "Force login"
+      "DESCRIPTION": "¡Ya estás registrado!",
+      "BUTTON": "Forzar inicio de sesión"
     }
   },
 
   "LOGIN": {
-    "SUCCESS": "Welcome back, {{ username }}"
+    "SUCCESS": "Bienvenido, {{ username }}"
   },
 
   "LOGOUT": {
-    "SUCCESS": "See you again soon!",
-    "ERROR": "An error occured."
+    "SUCCESS": "¡Te veo de nuevo pronto!",
+    "ERROR": "Ocurrió un error."
   },
 
   "NAVIGATOR": {
-    "NEWS": "News",
-    "COMMUNITY": "Community",
-    "EMPLOYEES": "Employees",
-    "SETTINGS": "Preferences"
+    "NEWS": "Noticias",
+    "COMMUNITY": "Comunidad",
+    "EMPLOYEES": "Empleados",
+    "SETTINGS": "Ajustes"
   },
 
   "FOOTER": {
     "RIGHTS_RESERVED": "&nbsp; &copy; 2020. All Rights Reserved",
-    "NOT_SULAKE": "This website is not owned by Sulake nor operated by Habbo Hotel Representatives"
+    "NOT_SULAKE": "Este sitio web es propiedad de boombang.fr"
   },
 
   "404": {
-    "DESCRIPTION": "Page not Found!",
-    "BUTTON": "Go Back"
+    "DESCRIPTION": "¡Página no encontrada!",
+    "BUTTON": "Volver"
   },
 
-  "UNKNOWN_ERROR": "An unknown error has occured!",
-  "SESSION": "You must login to view this page!"
+  "UNKNOWN_ERROR": "¡Un error desconocido a ocurrido!",
+  "SESSION": "¡Debes iniciar sesión para ver esta página!"
 }

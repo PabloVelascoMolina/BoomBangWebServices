@@ -7,5 +7,5 @@ import {environment} from '../../../../../environments/environment';
   styleUrls: ['./discord.component.scss']
 })
 export class DiscordComponent {
-  hotelName = environment.app.hotelName;
+  appName = environment.app.appName;
 }

@@ -16,7 +16,7 @@
       "BUTTON": "Login!"
     },
 
-    "REGISTER": "Sei nuovo qui? <span class=\"text--red\">Entra in {{ hotelName }}</span>"
+    "REGISTER": "Sei nuovo qui? <span class=\"text--red\">Entra in {{ appName }}</span>"
   },
 
   "REGISTER": {
@@ -136,7 +136,7 @@
 
   "FOOTER": {
     "RIGHTS_RESERVED": "&nbsp; &copy; 2020. Tutti i diritti riservati.",
-    "NOT_SULAKE": "Questo sito non è di proprietà di Sulake o operato dallo staff di Habbo Hotel."
+    "NOT_SULAKE": "Questo sito non è di proprietà di Sulake o operato dallo staff di BoomBang Hotel."
   },
 
   "404": {

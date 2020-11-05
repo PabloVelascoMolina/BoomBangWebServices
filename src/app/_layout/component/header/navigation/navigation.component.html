@@ -1,53 +1,48 @@
-
-<div class="container">
-  <a class="navbar-brand" routerLink="/">
-    <img src="../../../../../assets/images/logo.png" alt='{{ hotelName }}' title='{{ hotelName }}'/>
-  </a>
-
-  <button class="navbar-toggler" (click)="toggle()" type="button" data-toggle="collapse" data-target="#navbar"
-          aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="/"><img src="../../../../../assets/images/logo_big.png" width="50" alt='{{ appName }}' title='{{ appName }}' /></a>
+  <button class="navbar-toggler" (click)="toggle()" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link icon icon--dashboard" routerLink='dashboard' routerLinkActive="active">
-          Dashboard
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link icon icon--articles" routerLink="articles" routerLinkActive="active"
-           [translate]="'NAVIGATOR.NEWS'">
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link icon icon--community" routerLink="community" routerLinkActive="active"
-           [translate]="'NAVIGATOR.COMMUNITY'"></a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link icon icon--employees" routerLink="employees" routerLinkActive="active"
-           [translate]="'NAVIGATOR.EMPLOYEES'">
-        </a>
-      </li>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item" routerLink='home' routerLinkActive="active">
+            <a class="nav-link" routerLink='home' routerLinkActive="font-weight-bold">Inicio <span class="sr-only">(current)</span><div class="circle" routerLink='home' routerLinkActive="circle-active"></div></a>
+        </li>
+        <li class="nav-item" routerLink='community' routerLinkActive="active">
+          <a class="nav-link" routerLink='community' routerLinkActive="font-weight-bold" href="#">Comunidad <div class="circle" routerLink='community' routerLinkActive="circle-active"></div></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Seguridad</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Premium</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Tienda</a>
+        </li>
     </ul>
-
-    <ul class="navbar-nav ml-auto">
+    <ng-template *ngIf="isAuthenticated; else guest">
+    <ul class="navbar-nav">
       <li class="nav-item dropdown">
-        <a id="user--dropdown" [style.backgroundImage]="'url('+ look + ')'"  class="nav-link dropdown-toggle" href="#"
-           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ username }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="user--dropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="logout">Logout</a>
-        </div>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="https://boombang.fr/api/avatarimage/index.php?id=9&color_1=161616&color_2=A17850&color_3=66CC99&color_4=4A3021&color_5=8C6136" class="rounded-circle avatar-circle" /> Gideon
+          </a>
+          <div class="dropdown-menu dropdown-menu-right custom-border" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Ajustes</a>
+              <a class="dropdown-item" href="#">Historial de pagos</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Cerrar sesión</a>
+          </div>
       </li>
     </ul>
+    </ng-template>
+    <ng-template #guest>
+      <ul class="navbar-nav">
+        <li class="nav-item" routerLink='login' routerLinkActive="active">
+          <a class="nav-link">Iniciar sesión</a>
+        </li>
+      </ul>
+    </ng-template>
   </div>
-</div>
+</nav>

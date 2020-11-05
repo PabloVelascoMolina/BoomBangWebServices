@@ -8,7 +8,7 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap/modal';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  hotelName: string;
+  appName: string;
 
   modalRef: BsModalRef;
 
@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.hotelName = environment.app.hotelName;
+    this.appName = environment.app.appName;
   }
 
   openModal(template: TemplateRef<any>) {

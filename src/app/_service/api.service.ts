@@ -35,7 +35,7 @@ export class ApiService {
    */
   post(url: string, body: any = {}, options = {}, loader: boolean = true): Observable<API> {
     this.isLoadable(url, loader);
-    return this.http.post<API>(`${environment.app.endpoint}/${this.languageService.language}/${url}`, body, options);
+    return this.http.post<API>(`${environment.app.endpoint}/${url}`, body, options);
   }
 
   /**
@@ -47,7 +47,7 @@ export class ApiService {
    */
   get(url: string, options: {} = {}, loader: boolean = true): Observable<API> {
     this.isLoadable(url, loader);
-    return this.http.get<API>(`${environment.app.endpoint}/${this.languageService.language}/${url}`, options);
+    return this.http.get<API>(`${environment.app.endpoint}/${url}`, options);
   }
 
   /**
@@ -60,7 +60,7 @@ export class ApiService {
    */
   put(url: string, body: any = {}, options: {} = {}, loader: boolean = true): Observable<API> {
     this.isLoadable(url, loader);
-    return this.http.put<API>(`${environment.app.endpoint}/${this.languageService.language}/${url}`, body, options);
+    return this.http.put<API>(`${environment.app.endpoint}/${url}`, body, options);
   }
 
   /**
@@ -72,7 +72,7 @@ export class ApiService {
    */
   delete(url: string, options: {} = {}, loader: boolean = true): Observable<API> {
     this.isLoadable(url, loader);
-    return this.http.delete<API>(`${environment.app.endpoint}/${this.languageService.language}/${url}`, options);
+    return this.http.delete<API>(`${environment.app.endpoint}/${url}`, options);
   }
 
   /**
@@ -81,7 +81,7 @@ export class ApiService {
    * @return string
    */
   url(value: string): string {
-    return `${environment.app.endpoint}/${this.languageService.language}/${value}`;
+    return `${environment.app.endpoint}/${value}`;
   }
 
   /**

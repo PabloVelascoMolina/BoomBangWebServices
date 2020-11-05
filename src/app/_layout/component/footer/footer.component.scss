@@ -1,12 +1,11 @@
 :host {
-  width: 100vw;
   background-color: var(--main-bg-color);
   font-size: 15px;
   z-index: 3;
 
   & > #footer--sub {
     background-color: var(--main-bg-dark);
-    color: #fff;
+    color:#333;
 
     .list-title {
       font-weight: 600;
@@ -21,14 +20,14 @@
           color: #6A6E77;
 
           &:hover {
-            color: #fff;
+            color: #111;
           }
         }
       }
     }
 
     p {
-      color: #6A6E77;
+      color:#333;
       margin-top: 1rem;
     }
   }

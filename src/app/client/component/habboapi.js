@@ -1,6 +1,6 @@
 function initializeExternalInterfaces() {
   "use strict";
-  window.HabboFlashClient.init(document.getElementById("client-flash"))
+  window.BoomBangFlashClient.init(document.getElementById("client-flash"))
 }! function() {
   "use strict";
   var n = "*";
@@ -23,33 +23,33 @@ function initializeExternalInterfaces() {
         call: "disconnect"
       })
     }, window.FlashExternalInterface.heartBeat = function() {
-      window.HabboFlashClient.started = !0, window.MainApp.postMessage({
+      window.BoomBangFlashClient.started = !0, window.MainApp.postMessage({
         call: "heartbeat"
       })
     }, window.FlashExternalInterface.legacyTrack = function(n, e, a) {
-      window.HabboFlashClient.started = !0, window.HabboTracking.track(n, e, a)
+      window.BoomBangFlashClient.started = !0, window.BoomBangTracking.track(n, e, a)
     }, window.FlashExternalInterface.loadConversionTrackingFrame = function() {
-      var n = window.flashvars.unique_habbo_id;
+      var n = window.flashvars.unique_BoomBang_id;
       // $("#conversion-tracking").attr("src", "/client/" + n + "/conversion-tracking")
       console.log(n + ' CONversation');
     }, window.FlashExternalInterface.logCrash = function(n) {
-      window.HabboFlashClient.started = !0, window.MainApp.postMessage({
+      window.BoomBangFlashClient.started = !0, window.MainApp.postMessage({
         call: "disconnect"
-      }), window.HabboWebApi.logCrash(n, function(n) {
+      }), window.BoomBangWebApi.logCrash(n, function(n) {
         n && window.FlashExternalInterface.track("log", "fatal", "Can't log login crash: " + n)
       })
     }, window.FlashExternalInterface.logDebug = function(n) {
       window.FlashExternalInterface.track("log", "debug", n)
     }, window.FlashExternalInterface.logError = function(n) {
-      window.HabboFlashClient.started = !0, window.HabboWebApi.logError(n, function(n) {
+      window.BoomBangFlashClient.started = !0, window.BoomBangWebApi.logError(n, function(n) {
         n && window.FlashExternalInterface.track("log", "error", "Can't log login error: " + n)
       })
     }, window.FlashExternalInterface.logWarn = function(n) {
       window.FlashExternalInterface.track("log", "warn", n)
     }, window.FlashExternalInterface.logLoginStep = function(e, a) {
-      window.FlashExternalInterface.track("clientload", e, a), window.HabboFlashClient.started = !0, n || "client.init.core.running" !== e || (n = !0, window.MainApp.postMessage({
+      window.FlashExternalInterface.track("clientload", e, a), window.BoomBangFlashClient.started = !0, n || "client.init.core.running" !== e || (n = !0, window.MainApp.postMessage({
         call: "hotel-ready"
-      })), window.HabboWebApi.logLoginStep(e, a, function(n) {
+      })), window.BoomBangWebApi.logLoginStep(e, a, function(n) {
         n && window.FlashExternalInterface.track("log", "error", "Can't log login step: " + n)
       })
     }, window.FlashExternalInterface.logout = function() {
@@ -62,20 +62,20 @@ function initializeExternalInterfaces() {
         target: n
       })
     }, window.FlashExternalInterface.openHabblet = function(n, e) {
-      window.HabboTracking.track("openhablet", "habletid", n);
-      var a = window.HabboPageTransformer.transformHabblet(n, e);
+      window.BoomBangTracking.track("openhablet", "habletid", n);
+      var a = window.BoomBangPageTransformer.transformHabblet(n, e);
       window.FlashExternalInterface.openPage(a)
     }, window.FlashExternalInterface.openWebHabblet = function(n, e) {
-      window.HabboTracking.track("openwebhablet", n, e);
-      var a = window.HabboPageTransformer.transformHabblet(n, e);
+      window.BoomBangTracking.track("openwebhablet", n, e);
+      var a = window.BoomBangPageTransformer.transformHabblet(n, e);
       window.FlashExternalInterface.openPage(a)
     }, window.FlashExternalInterface.openPage = function(n) {
-      n = window.HabboPageTransformer.translate(n), window.HabboTracking.track("openpage", "", n), window.MainApp.postMessage({
+      n = window.BoomBangPageTransformer.translate(n), window.BoomBangTracking.track("openpage", "", n), window.MainApp.postMessage({
         call: "open-page",
         target: n
       })
     }, window.FlashExternalInterface.track = function(n, e, a) {
-      window.HabboFlashClient.started = !0, window.HabboTracking.track(n, e, a)
+      window.BoomBangFlashClient.started = !0, window.BoomBangTracking.track(n, e, a)
     }, window.FlashExternalInterface.updateFigure = function(n) {
       window.MainApp.postMessage({
         call: "update-figure",
@@ -87,12 +87,12 @@ function initializeExternalInterfaces() {
         target: n
       })
     }, window.FlashExternalInterface.openMinimail = function(n) {
-      window.HabboTracking.track("minimail", "open", n), window.MainApp.postMessage({
+      window.BoomBangTracking.track("minimail", "open", n), window.MainApp.postMessage({
         call: "open-page",
         target: "/"
       })
     }, window.FlashExternalInterface.openNews = function() {
-      window.HabboTracking.track("news", "open", ""), window.MainApp.postMessage({
+      window.BoomBangTracking.track("news", "open", ""), window.MainApp.postMessage({
         call: "open-page",
         target: "/"
       })
@@ -104,7 +104,7 @@ function initializeExternalInterfaces() {
       })
     }, window.FlashExternalInterface.subscriptionUpdated = function(n) {
       window.MainApp.postMessage({
-        call: "update-habbo-club",
+        call: "update-BoomBang-club",
         target: n
       })
     }, window.FlashExternalInterface.updateBuildersClub = function(n) {
@@ -142,14 +142,14 @@ function initializeExternalInterfaces() {
     }
 
     function o(n) {
-      window.HabboFlashClient.flashInterface.interstitialCompleted(n)
+      window.BoomBangFlashClient.flashInterface.interstitialCompleted(n)
     }
     var t;
-    window.addEventListener("message", n, !1), window.HabboFlashClient = {
+    window.addEventListener("message", n, !1), window.BoomBangFlashClient = {
       started: !1,
       init: function(n) {
-        window.HabboTracking.track("clientload", "starting", "Initalizing Habbo Client."), window.FlashExternalInterface.logLoginStep("web.view.start"), n || (console.error("Invalid FlashClient. Can't use JS->Flash interface."), window.FlashExternalInterface.logLoginStep("web.flash_missing")), t = n, window.HabboFlashClient.flashInterface = n, setTimeout(function() {
-          window.HabboFlashClient.started || window.FlashExternalInterface.logLoginStep("client.init.swf.error")
+        window.BoomBangTracking.track("clientload", "starting", "Initalizing BoomBang Client."), window.FlashExternalInterface.logLoginStep("web.view.start"), n || (console.error("Invalid FlashClient. Can't use JS->Flash interface."), window.FlashExternalInterface.logLoginStep("web.flash_missing")), t = n, window.BoomBangFlashClient.flashInterface = n, setTimeout(function() {
+          window.BoomBangFlashClient.started || window.FlashExternalInterface.logLoginStep("client.init.swf.error")
         }, 3e4)
       }
     }
@@ -165,7 +165,7 @@ function initializeExternalInterfaces() {
       "/creditflow": "/shop",
       "/news": "/community/category/all/1"
     };
-    window.HabboPageTransformer = {
+    window.BoomBangPageTransformer = {
       translate: function(a) {
         for (var o in e)
           if (e.hasOwnProperty(o) && n(a, o)) return e[o];
@@ -191,7 +191,7 @@ function initializeExternalInterfaces() {
         e(n, null)
       })
     }
-    window.HabboShopApi = {}, window.HabboShopApi.checkOffer = function(e) {
+    window.BoomBangShopApi = {}, window.BoomBangShopApi.checkOffer = function(e) {
       n("/shopapi/checkoffer/", e)
     }
   }(),
@@ -200,9 +200,9 @@ function initializeExternalInterfaces() {
     var n = function(n, e, a) {
       "console" in window && "log" in console && console.log("action = [" + n + "], label = [" + e + "], value = [" + a + "]")
     };
-    window.HabboTracking = {
+    window.BoomBangTracking = {
       track: function(e, a, o) {
-        n(e, a, o), "clientload" === e && window.HabboTracking.gaTrack(e, a)
+        n(e, a, o), "clientload" === e && window.BoomBangTracking.gaTrack(e, a)
       },
       gaTrack: function(n, e) {
         window._gaq && window._gaq.push(["_trackEvent", n, e])
@@ -225,38 +225,38 @@ function initializeExternalInterfaces() {
         a(n, null)
       })
     }
-    window.HabboWebApi = {}, window.HabboWebApi.checkName = function(e, a) {
+    window.BoomBangWebApi = {}, window.BoomBangWebApi.checkName = function(e, a) {
       console.log({
         name: e,
         unkown: a
       });
-    }, window.HabboWebApi.claimName = function(e, a) {
+    }, window.BoomBangWebApi.claimName = function(e, a) {
       console.log({
         name: e,
         unkown: a
       });
-    }, window.HabboWebApi.saveFigure = function(e, a, o) {
+    }, window.BoomBangWebApi.saveFigure = function(e, a, o) {
       console.log({
         figure: e,
         gender: a,
         uknown: o
       });
-    }, window.HabboWebApi.selectRoom = function(e, a) {
+    }, window.BoomBangWebApi.selectRoom = function(e, a) {
       console.log({
         roomIndex: e,
         unkown: a
       });
-    }, window.HabboWebApi.logCrash = function(e, a) {
+    }, window.BoomBangWebApi.logCrash = function(e, a) {
       console.log({
         message: e,
         unkown: a
       });
-    }, window.HabboWebApi.logError = function(e, a) {
+    }, window.BoomBangWebApi.logError = function(e, a) {
       console.log({
         message: e,
         unkown: a
       });
-    }, window.HabboWebApi.logLoginStep = function(e, a, o) {
+    }, window.BoomBangWebApi.logLoginStep = function(e, a, o) {
       console.log({
         step: e,
         data: a
@@ -266,25 +266,25 @@ function initializeExternalInterfaces() {
   function() {
     "use strict";
     window.NewUserReception = {}, window.NewUserReception.checkName = function(n) {
-      console.log('Checking name: "' + n + '"...'), window.HabboWebApi.checkName(n, function(e, a) {
-        return e ? (console.error("Checking name failed!"), void window.HabboFlashClient.flashInterface.newUserReceptionCheckNameFailed(n)) : void window.HabboFlashClient.flashInterface.newUserReceptionCheckNameResponse(n, a.code, a.validationResult || [], a.suggestions)
+      console.log('Checking name: "' + n + '"...'), window.BoomBangWebApi.checkName(n, function(e, a) {
+        return e ? (console.error("Checking name failed!"), void window.BoomBangFlashClient.flashInterface.newUserReceptionCheckNameFailed(n)) : void window.BoomBangFlashClient.flashInterface.newUserReceptionCheckNameResponse(n, a.code, a.validationResult || [], a.suggestions)
       })
     }, window.NewUserReception.chooseRoom = function(n) {
-      console.log('Choosing room: "' + n + '"...'), window.HabboWebApi.selectRoom(n, function(n) {
-        return n ? (console.error("Choosing room failed!"), void window.HabboFlashClient.flashInterface.newUserReceptionChooseRoomFailed()) : void window.HabboFlashClient.flashInterface.newUserReceptionChooseRoomResponse()
+      console.log('Choosing room: "' + n + '"...'), window.BoomBangWebApi.selectRoom(n, function(n) {
+        return n ? (console.error("Choosing room failed!"), void window.BoomBangFlashClient.flashInterface.newUserReceptionChooseRoomFailed()) : void window.BoomBangFlashClient.flashInterface.newUserReceptionChooseRoomResponse()
       })
     }, window.NewUserReception.claimName = function(n) {
-      console.log('Claiming name: "' + n + '"...'), window.HabboWebApi.claimName(n, function(e, a) {
-        return e ? (console.error("Claiming name failed!"), void window.HabboFlashClient.flashInterface.newUserReceptionClaimNameFailed(n)) : (window.HabboFlashClient.flashInterface.newUserReceptionClaimNameResponse(a.code, a.validationResult, a.suggestions), void("OK" === a.code && window.MainApp.postMessage({
+      console.log('Claiming name: "' + n + '"...'), window.BoomBangWebApi.claimName(n, function(e, a) {
+        return e ? (console.error("Claiming name failed!"), void window.BoomBangFlashClient.flashInterface.newUserReceptionClaimNameFailed(n)) : (window.BoomBangFlashClient.flashInterface.newUserReceptionClaimNameResponse(a.code, a.validationResult, a.suggestions), void("OK" === a.code && window.MainApp.postMessage({
           call: "update-name",
           target: n
         })))
       })
     }, window.NewUserReception.logStep = function(n) {
-      window.HabboTracking.track("nux", "log", n)
+      window.BoomBangTracking.track("nux", "log", n)
     }, window.NewUserReception.saveOutfit = function(n, e) {
-      console.log('Saving outfit: "' + n + '" - "' + e + '"...'), window.HabboWebApi.saveFigure(n, e, function(n, a) {
-        return n ? (console.error("Saving outfit failed!"), void window.HabboFlashClient.flashInterface.newUserReceptionSaveOutfitFailed()) : (window.HabboFlashClient.flashInterface.newUserReceptionSaveOutfitResponse(a.figureString, e, "OK"), void window.MainApp.postMessage({
+      console.log('Saving outfit: "' + n + '" - "' + e + '"...'), window.BoomBangWebApi.saveFigure(n, e, function(n, a) {
+        return n ? (console.error("Saving outfit failed!"), void window.BoomBangFlashClient.flashInterface.newUserReceptionSaveOutfitFailed()) : (window.BoomBangFlashClient.flashInterface.newUserReceptionSaveOutfitResponse(a.figureString, e, "OK"), void window.MainApp.postMessage({
           call: "update-figure",
           target: a.figureString
         }))
@@ -303,20 +303,20 @@ function initializeExternalInterfaces() {
         display_format: "bare_player",
         greyout: !1,
         callback_on_start: function(n) {
-          window.HabboFlashClient.flashInterface.sponsorPayOnStart(n.icon_small)
+          window.BoomBangFlashClient.flashInterface.sponsorPayOnStart(n.icon_small)
         },
         callback_no_offers: function() {
-          window.HabboFlashClient.flashInterface.sponsorPayNoOffers()
+          window.BoomBangFlashClient.flashInterface.sponsorPayNoOffers()
         },
         callback_on_close: function() {
-          window.HabboFlashClient.flashInterface.sponsorPayOnClose()
+          window.BoomBangFlashClient.flashInterface.sponsorPayOnClose()
         },
         callback_on_conversion: function() {
-          window.HabboFlashClient.flashInterface.sponsorPayOnConversion()
+          window.BoomBangFlashClient.flashInterface.sponsorPayOnConversion()
         }
       });
       try {
-        window.HabboFlashClient.flashInterface.sponsorPayLoaded()
+        window.BoomBangFlashClient.flashInterface.sponsorPayLoaded()
       } catch (n) {
         console && console.error && console.error(n)
       }
@@ -359,19 +359,19 @@ function initializeExternalInterfaces() {
     }
 
     function e(n) {
-      n && n.length > 0 ? window.HabboFlashClient.flashInterface.supersonicAdsOnCampaignsReady(n.length.toString()) : window.HabboFlashClient.flashInterface.supersonicAdsOnCampaignsReady("0")
+      n && n.length > 0 ? window.BoomBangFlashClient.flashInterface.supersonicAdsOnCampaignsReady(n.length.toString()) : window.BoomBangFlashClient.flashInterface.supersonicAdsOnCampaignsReady("0")
     }
 
     function a() {
-      window.HabboFlashClient.flashInterface.supersonicAdsOnCampaignOpen()
+      window.BoomBangFlashClient.flashInterface.supersonicAdsOnCampaignOpen()
     }
 
     function o() {
-      window.HabboFlashClient.flashInterface.supersonicAdsOnCampaignClose()
+      window.BoomBangFlashClient.flashInterface.supersonicAdsOnCampaignClose()
     }
 
     function t() {
-      window.HabboFlashClient.flashInterface.supersonicAdsOnCampaignCompleted()
+      window.BoomBangFlashClient.flashInterface.supersonicAdsOnCampaignCompleted()
     }
 
     function i() {
@@ -396,8 +396,8 @@ function initializeExternalInterfaces() {
   function() {
     "use strict";
     window.TargetedWebOffer = {}, window.TargetedWebOffer.checkOffer = function() {
-      console.log("Checking for offer..."), window.HabboShopApi.checkOffer(function(n, e) {
-        return n ? void window.HabboFlashClient.flashInterface.targetedWebOfferCheckFailed() : void window.HabboFlashClient.flashInterface.targetedWebOfferCheckResponse(e)
+      console.log("Checking for offer..."), window.BoomBangShopApi.checkOffer(function(n, e) {
+        return n ? void window.BoomBangFlashClient.flashInterface.targetedWebOfferCheckFailed() : void window.BoomBangFlashClient.flashInterface.targetedWebOfferCheckResponse(e)
       })
     }
   }();

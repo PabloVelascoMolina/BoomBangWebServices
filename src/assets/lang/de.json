@@ -15,7 +15,7 @@
       },
       "BUTTON": "Anmelden"
     },
-    "REGISTER": "Noch keinen Account? <span class=\"text--red\">Join {{ hotelName }}</span>"
+    "REGISTER": "Noch keinen Account? <span class=\"text--red\">Join {{ appName }}</span>"
   },
   "REGISTER": {
     "TITLE": "Registration",
@@ -87,7 +87,7 @@
       "DESCRIPTION": "Es wurde kein Raum gefunden"
     },
     "DISCORD": {
-      "TITLE": "Trete dem {{ hotelName }} Discord bei",
+      "TITLE": "Trete dem {{ appName }} Discord bei",
       "DESCRIPTION": "Hier wirst du nichts verpassen!"
     }
   },
@@ -169,7 +169,7 @@
   },
   "FOOTER": {
     "RIGHTS_RESERVED": "&nbsp; &copy; 2020. Alle Rechte an dieser Website vorbehalten.",
-    "NOT_SULAKE": "Diese Website gehört nicht der Sulake Corporation und wird nicht von Habbo Hotel &reg; betrieben."
+    "NOT_SULAKE": "Diese Website gehört nicht der Sulake Corporation und wird nicht von BoomBang Hotel &reg; betrieben."
   },
   "404": {
     "DESCRIPTION": "Seite wurde nicht gefunden!",
